@@ -12,7 +12,7 @@ const InnerCollection = Schema({
     type: String,
     required: true
   },
-  schema: {
+  definition: {
     type: String,
     required: true
   }
