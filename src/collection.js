@@ -7,6 +7,17 @@ const states = [
   'DELETED'
 ]
 
+const InnerCollection = Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  schema: {
+    type: String,
+    required: true
+  }
+})
+
 const Collection = Schema({
   '@state': {
     type: String,
@@ -42,7 +53,7 @@ const Collection = Schema({
     required: true
   },
   '@collection': {
-    type: String,
+    type: InnerCollection,
     required: true
   }
 })
