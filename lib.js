@@ -1,2 +1,2 @@
-exports.Document = require('./src/document')
-exports.Collection = require('./src/collection')
+exports.Document = require('./src/Document')
+exports.Collection = require('./src/Collection')
