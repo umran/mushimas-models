@@ -40,15 +40,7 @@ const Collection = Schema({
     type: String,
     required: true
   },
-  '@bucket': {
-    type: String,
-    required: true
-  },
   '@organizationId': {
-    type: String,
-    required: true
-  },
-  '@organization': {
     type: String,
     required: true
   },

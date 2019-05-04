@@ -2,12 +2,19 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const states = [
-  'ARCHIVED',
-  'PUBLISHED',
+  'INACTIVE',
+  'ACTIVE',
   'DELETED'
 ]
 
-const Document = Schema({
+const InnerCollection = Schema({
+  name: {
+    type: String,
+    required: true
+  }
+})
+
+const Collection = Schema({
   '@state': {
     type: String,
     required: true,
@@ -25,18 +32,14 @@ const Document = Schema({
     type: Number,
     required: true
   },
-  '@collectionId': {
+  '@organizationId': {
     type: String,
     required: true
   },
-  '@bucketId': {
-    type: String,
-    required: true
-  },
-  '@document': {
-    type: Schema.Types.Mixed,
+  '@bucket': {
+    type: InnerCollection,
     required: true
   }
 })
 
-module.exports = mongoose.model('Document', Document)
+module.exports = mongoose.model('Collection', Collection)
