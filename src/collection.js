@@ -46,4 +46,6 @@ const Collection = Schema({
   }
 })
 
-module.exports = mongoose.model('Collection', Collection)
+const model = mongoose.model('Collection', Collection)
+
+module.exports = model

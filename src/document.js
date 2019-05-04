@@ -39,4 +39,6 @@ const Document = Schema({
   }
 })
 
-module.exports = mongoose.model('Document', Document)
+const model = mongoose.model('Document', Document)
+
+module.exports = model

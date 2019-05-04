@@ -42,4 +42,6 @@ const Bucket = Schema({
   }
 })
 
-module.exports = mongoose.model('Bucket', Bucket)
+const model = mongoose.model('Bucket', Bucket)
+
+module.exports = model
