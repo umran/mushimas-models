@@ -40,10 +40,6 @@ const Collection = Schema({
     type: String,
     required: true
   },
-  '@organizationId': {
-    type: String,
-    required: true
-  },
   '@collection': {
     type: InnerCollection,
     required: true
