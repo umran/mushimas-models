@@ -1,6 +1,6 @@
 {
   "name": "mushimas-models",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "all the models used in running mushimas as a service",
   "main": "lib.js",
   "scripts": {
