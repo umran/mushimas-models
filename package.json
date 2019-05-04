@@ -1,0 +1,36 @@
+{
+  "name": "mushimas-models",
+  "version": "0.0.1",
+  "description": "all the models used in running mushimas as a service",
+  "main": "lib.js",
+  "scripts": {
+    "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umran/mushimas-models.git"
+  },
+  "keywords": [
+    "mushimas",
+    "models"
+  ],
+  "author": "Ahmed Umran Hussain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umran/mushimas-models/issues"
+  },
+  "homepage": "https://github.com/umran/mushimas-models#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-match": "^1.1.1",
+    "coveralls": "^3.0.2",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
+  },
+  "dependencies": {
+    "mongoose": "^5.5.5"
+  }
+}
