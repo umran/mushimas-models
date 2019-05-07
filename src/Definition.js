@@ -26,7 +26,7 @@ const ItemOptions = Schema({
   },
   es_keyword: {
     type: Boolean,
-    required: true
+    required: false
   },
   es_boost: {
     type: Number,
@@ -61,15 +61,15 @@ const Options = Schema({
   },
   enabled: {
     type: Boolean,
-    required: true
+    required: false
   },
   es_indexed: {
     type: Boolean,
-    required: true
+    required: false
   },
   es_keyword: {
     type: Boolean,
-    required: true
+    required: false
   },
   es_boost: {
     type: Number,
