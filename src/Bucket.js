@@ -12,7 +12,7 @@ const InnerBucket = Schema({
     type: String,
     required: true
   }
-})
+}, { _id: false })
 
 const Bucket = Schema({
   '@state': {

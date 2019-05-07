@@ -48,7 +48,7 @@ const ItemOptions = Schema({
     type: String,
     required: false
   }
-})
+}, { _id: false })
 
 const Options = Schema({
   type: {
@@ -95,7 +95,7 @@ const Options = Schema({
     type: ItemOptions,
     required: false
   }
-})
+}, { _id: false })
 
 const Field = Schema({
   name: {
@@ -106,7 +106,7 @@ const Field = Schema({
     type: Options,
     required: true
   }
-})
+}, { _id: false })
 
 const InnerDefinition = Schema({
   name: {
@@ -121,7 +121,7 @@ const InnerDefinition = Schema({
     type: [Field],
     required: true
   }
-})
+}, { _id: false })
 
 const Definition = Schema({
   '@state': {
