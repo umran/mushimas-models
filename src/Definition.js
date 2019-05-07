@@ -7,13 +7,118 @@ const states = [
   'DELETED'
 ]
 
+const ItemOptions = Schema({
+  type: {
+    type: String,
+    required: true
+  },
+  required: {
+    type: Boolean,
+    required: true
+  },
+  enabled: {
+    type: Boolean,
+    required: true
+  },
+  es_indexed: {
+    type: Boolean,
+    required: true
+  },
+  es_keyword: {
+    type: Boolean,
+    required: true
+  },
+  es_boost: {
+    type: Number,
+    required: false
+  },
+  es_analyzer: {
+    type: String,
+    required: false
+  },
+  es_search_analyzer: {
+    type: String,
+    required: false
+  },
+  es_search_quote_analyzer: {
+    type: String,
+    required: false
+  },
+  ref: {
+    type: String,
+    required: false
+  }
+})
+
+const Options = Schema({
+  type: {
+    type: String,
+    required: true
+  },
+  required: {
+    type: Boolean,
+    required: true
+  },
+  enabled: {
+    type: Boolean,
+    required: true
+  },
+  es_indexed: {
+    type: Boolean,
+    required: true
+  },
+  es_keyword: {
+    type: Boolean,
+    required: true
+  },
+  es_boost: {
+    type: Number,
+    required: false
+  },
+  es_analyzer: {
+    type: String,
+    required: false
+  },
+  es_search_analyzer: {
+    type: String,
+    required: false
+  },
+  es_search_quote_analyzer: {
+    type: String,
+    required: false
+  },
+  ref: {
+    type: String,
+    required: false
+  },
+  item: {
+    type: ItemOptions,
+    required: false
+  }
+})
+
+const Field = Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  options: {
+    type: Options,
+    required: true
+  }
+})
+
 const InnerDefinition = Schema({
   name: {
     type: String,
     required: true
   },
-  definition: {
+  class: {
     type: String,
+    required: true
+  },
+  fields: {
+    type: [Field],
     required: true
   }
 })
