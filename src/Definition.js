@@ -7,7 +7,7 @@ const states = [
   'DELETED'
 ]
 
-const InnerCollection = Schema({
+const InnerDefinition = Schema({
   name: {
     type: String,
     required: true
@@ -18,7 +18,7 @@ const InnerCollection = Schema({
   }
 })
 
-const Collection = Schema({
+const Definition = Schema({
   '@state': {
     type: String,
     required: true,
@@ -40,12 +40,12 @@ const Collection = Schema({
     type: String,
     required: true
   },
-  '@collection': {
-    type: InnerCollection,
+  '@definition': {
+    type: InnerDefinition,
     required: true
   }
 })
 
-const model = mongoose.model('Collection', Collection)
+const model = mongoose.model('Definition', Definition)
 
 module.exports = model

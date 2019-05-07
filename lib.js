@@ -1,3 +1,3 @@
 exports.Document = require('./src/Document')
-exports.Collection = require('./src/Collection')
+exports.Definition = require('./src/Definition')
 exports.Bucket = require('./src/Bucket')
