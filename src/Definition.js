@@ -141,6 +141,14 @@ const Definition = Schema({
     type: Number,
     required: true
   },
+  '@idempotencyKey': {
+    type: String,
+    required: true
+  },
+  '@initialHash': {
+    type: String,
+    required: true
+  },
   '@bucketId': {
     type: String,
     required: true
