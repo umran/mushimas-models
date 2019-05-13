@@ -7,6 +7,17 @@ const states = [
   'DELETED'
 ]
 
+const InnerConfiguration = Schema({
+  collectionMapping: {
+    type: String,
+    required: true
+  },
+  configuration: {
+    type: String,
+    required: true
+  }
+}, { _id: false })
+
 const Configuration = Schema({
   '@state': {
     type: String,
@@ -30,7 +41,7 @@ const Configuration = Schema({
     required: true
   },
   '@configuration': {
-    type: String,
+    type: InnerConfiguration,
     required: false
   }
 })
