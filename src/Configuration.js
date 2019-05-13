@@ -39,7 +39,7 @@ const Configuration = Schema({
   },
   '@configuration': {
     type: String,
-    required: true
+    required: false
   }
 })
 
