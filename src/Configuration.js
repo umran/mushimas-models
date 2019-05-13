@@ -7,14 +7,7 @@ const states = [
   'DELETED'
 ]
 
-const InnerBucket = Schema({
-  name: {
-    type: String,
-    required: true
-  }
-}, { _id: false })
-
-const Bucket = Schema({
+const Configuration = Schema({
   '@state': {
     type: String,
     required: true,
@@ -32,24 +25,16 @@ const Bucket = Schema({
     type: Number,
     required: true
   },
-  '@idempotencyKey': {
+  '@bucketId': {
     type: String,
     required: true
   },
-  '@initialHash': {
+  '@configuration': {
     type: String,
-    required: true
-  },
-  '@organizationId': {
-    type: String,
-    required: true
-  },
-  '@bucket': {
-    type: InnerBucket,
     required: true
   }
 })
 
-const model = mongoose.model('Bucket', Bucket)
+const model = mongoose.model('Configuration', Configuration)
 
 module.exports = model
