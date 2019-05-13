@@ -32,14 +32,6 @@ const Bucket = Schema({
     type: Number,
     required: true
   },
-  '@idempotencyKey': {
-    type: String,
-    required: true
-  },
-  '@initialHash': {
-    type: String,
-    required: true
-  },
   '@organizationId': {
     type: String,
     required: true
