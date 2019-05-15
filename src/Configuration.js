@@ -12,7 +12,7 @@ const InnerConfiguration = Schema({
     type: String,
     required: true
   },
-  configuration: {
+  schemas: {
     type: String,
     required: true
   }
