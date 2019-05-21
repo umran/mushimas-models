@@ -17,14 +17,6 @@ const Document = Schema({
     type: Date,
     required: true
   },
-  '@lastCommitted': {
-    type: Date,
-    required: true
-  },
-  '@version': {
-    type: Number,
-    required: true
-  },
   '@idempotencyKey': {
     type: String,
     required: true
