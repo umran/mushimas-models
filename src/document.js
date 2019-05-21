@@ -41,9 +41,17 @@ const Document = Schema({
     type: String,
     required: true
   },
-  '@document': {
+  '@draftPublished': {
+    type: Boolean,
+    required: true
+  },
+  '@draft': {
     type: Schema.Types.Mixed,
     required: true
+  },
+  '@document': {
+    type: Schema.Types.Mixed,
+    required: false
   }
 })
 
