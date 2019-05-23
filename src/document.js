@@ -17,14 +17,6 @@ const Document = Schema({
     type: Date,
     required: true
   },
-  '@idempotencyKey': {
-    type: String,
-    required: true
-  },
-  '@initialHash': {
-    type: String,
-    required: true
-  },
   '@collectionId': {
     type: String,
     required: true
