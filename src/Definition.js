@@ -22,7 +22,7 @@ const ItemOptions = Schema({
   },
   es_indexed: {
     type: Boolean,
-    required: true
+    required: false
   },
   es_keyword: {
     type: Boolean,
